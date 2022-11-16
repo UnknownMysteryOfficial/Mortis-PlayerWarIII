@@ -1,0 +1,1999 @@
+{
+  "plugin.dependencies": "",
+  "plugin.load-before": "",
+  "plugin.version": "1.19.2",
+  "debug-build-mode": false,
+  "open-tab": 4,
+  "plugin-components": [
+    {
+      "=": "comp-command",
+      "parameters": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "children": [
+        {
+          "=": "stat-open-gui",
+          "parameters": [
+            {
+              "=": "expr-string",
+              "parameters": ["pw1"]
+            },
+            {"=": "expr-command-sender"}
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String...)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "size": 1,
+              "=": "expr-new-list",
+              "parameters": [{
+                "=": "expr-string",
+                "parameters": ["&7Select your warrior to fight with the rebels!"]
+              }]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "mpw-gui",
+        "",
+        "Opens the GUI to select your what type of warrior you want to be and war with others!",
+        "pw.command",
+        "&4&lHey! Sorry but, You don't have the permission to access to this command.",
+        "/mpw gui"
+      ]
+    },
+    {
+      "children": [
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {"=": "expr-created-gui-inventory"},
+            {
+              "=": "expr-number",
+              "parameters": ["10"]
+            },
+            {
+              "=": "expr-new-named-item-with-lore",
+              "parameters": [
+                {"=": "org.bukkit.Material#DIAMOND_SWORD"},
+                {
+                  "=": "expr-string",
+                  "parameters": ["&2&lSwords Man"]
+                },
+                {
+                  "size": 9,
+                  "=": "expr-new-list",
+                  "parameters": [
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7Swords Man Warrior have the following:"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Diamond Sword (x2)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Lava Bucket"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Golden Apples (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Cooked Beef (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Shield"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Full set armor (Iron)"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {"=": "expr-created-gui-inventory"},
+            {
+              "=": "expr-number",
+              "parameters": ["12"]
+            },
+            {
+              "=": "expr-new-named-item-with-lore",
+              "parameters": [
+                {"=": "org.bukkit.Material#DIAMOND_AXE"},
+                {
+                  "=": "expr-string",
+                  "parameters": ["&2&lAxe Professional"]
+                },
+                {
+                  "size": 8,
+                  "=": "expr-new-list",
+                  "parameters": [
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7Axe Professional Warrior have the following:"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Diamond Axe (x2)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Fire Charge (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Enchanted Golden Apples (x16)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Cooked Chicken (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Full set armor (Chainmail)"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {"=": "expr-created-gui-inventory"},
+            {
+              "=": "expr-number",
+              "parameters": ["14"]
+            },
+            {
+              "=": "expr-new-named-item-with-lore",
+              "parameters": [
+                {"=": "org.bukkit.Material#TRIDENT"},
+                {
+                  "=": "expr-string",
+                  "parameters": ["&2&lDrowned Official"]
+                },
+                {
+                  "size": 8,
+                  "=": "expr-new-list",
+                  "parameters": [
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7Drowned Official Warrior have the following:"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Trident (x2)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Snow Balls (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Golden Carrot (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Cooked Cod (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Full set armor (Gold)"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {"=": "expr-created-gui-inventory"},
+            {
+              "=": "expr-number",
+              "parameters": ["16"]
+            },
+            {
+              "=": "expr-new-named-item-with-lore",
+              "parameters": [
+                {"=": "org.bukkit.Material#BOW"},
+                {
+                  "=": "expr-string",
+                  "parameters": ["&2&lArcher Hood"]
+                },
+                {
+                  "size": 10,
+                  "=": "expr-new-list",
+                  "parameters": [
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7Swords Man Warrior have the following:"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": [""]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Bow"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Crossbow"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Spectral Arrow (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Arrow (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Cooked Mutton (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Cooked Rabbot (x64)"]
+                    },
+                    {
+                      "=": "expr-string",
+                      "parameters": ["&7- Full set armor (Diamond)"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "=": "comp-create-gui",
+      "parameters": [
+        "pw1",
+        {
+          "=": "expr-string",
+          "parameters": ["Select your warrior type"]
+        },
+        {
+          "=": "expr-number",
+          "parameters": ["27"]
+        },
+        "create once"
+      ]
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "=": "org.bukkit.inventory.Inventory#clear()",
+              "parameters": [{
+                "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                "parameters": [{"=": "expr-gui-clicker"}]
+              }]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["0"]
+                },
+                {"=": "org.bukkit.Material#DIAMOND_SWORD"}
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["1"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_SWORD"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["2"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#LAVA_BUCKET"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["3"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#GOLDEN_APPLE"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["4"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#COOKED_BEEF"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["40"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#SHIELD"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["39"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#IRON_HELMET"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["38"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#IRON_CHESTPLATE"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["37"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#IRON_LEGGINGS"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["36"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#IRON_BOOTS"}]
+                }
+              ]
+            }
+          ],
+          "=": "stat-if-statement",
+          "parameters": [
+            {
+              "=": "expr-is-equal",
+              "parameters": [
+                {"=": "expr-gui-clicked-slot"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["10"]
+                }
+              ]
+            },
+            "normal"
+          ]
+        },
+        {
+          "children": [
+            {
+              "=": "org.bukkit.inventory.Inventory#clear()",
+              "parameters": [{
+                "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                "parameters": [{"=": "expr-gui-clicker"}]
+              }]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["0"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_AXE"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["1"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_AXE"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["2"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#FIRE_CHARGE"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["3"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#ENCHANTED_GOLDEN_APPLE"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["16"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["4"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#COOKED_CHICKEN"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["39"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_HELMET"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["38"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_CHESTPLATE"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["37"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_LEGGINGS"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["36"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_BOOTS"}]
+                }
+              ]
+            }
+          ],
+          "=": "stat-if-statement",
+          "parameters": [
+            {
+              "=": "expr-is-equal",
+              "parameters": [
+                {"=": "expr-gui-clicked-slot"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["12"]
+                }
+              ]
+            },
+            "normal"
+          ]
+        },
+        {
+          "children": [
+            {
+              "=": "org.bukkit.inventory.Inventory#clear()",
+              "parameters": [{
+                "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                "parameters": [{"=": "expr-gui-clicker"}]
+              }]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["0"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#TRIDENT"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["1"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#TRIDENT"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["2"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int,short)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#SNOWBALL"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    },
+                    {
+                      "=": "expr-number",
+                      "parameters": ["25"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["3"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#GOLDEN_CARROT"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["4"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#COOKED_COD"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["39"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#GOLDEN_HELMET"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["38"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#GOLDEN_CHESTPLATE"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["37"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#GOLDEN_LEGGINGS"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["36"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#GOLDEN_BOOTS"}]
+                }
+              ]
+            }
+          ],
+          "=": "stat-if-statement",
+          "parameters": [
+            {
+              "=": "expr-is-equal",
+              "parameters": [
+                {"=": "expr-gui-clicked-slot"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["14"]
+                }
+              ]
+            },
+            "normal"
+          ]
+        },
+        {
+          "children": [
+            {
+              "=": "org.bukkit.inventory.Inventory#clear()",
+              "parameters": [{
+                "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                "parameters": [{"=": "expr-gui-clicker"}]
+              }]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["0"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#BOW"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["1"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#CROSSBOW"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["2"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#SPECTRAL_ARROW"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["3"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#ARROW"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["4"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#COOKED_MUTTON"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["5"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+                  "parameters": [
+                    {"=": "org.bukkit.Material#COOKED_RABBIT"},
+                    {
+                      "=": "expr-number",
+                      "parameters": ["64"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["39"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_HELMET"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["38"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_CHESTPLATE"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["37"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_LEGGINGS"}]
+                }
+              ]
+            },
+            {
+              "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+              "parameters": [
+                {
+                  "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+                  "parameters": [{"=": "expr-gui-clicker"}]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["36"]
+                },
+                {
+                  "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+                  "parameters": [{"=": "org.bukkit.Material#DIAMOND_BOOTS"}]
+                }
+              ]
+            }
+          ],
+          "=": "stat-if-statement",
+          "parameters": [
+            {
+              "=": "expr-is-equal",
+              "parameters": [
+                {"=": "expr-gui-clicked-slot"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["16"]
+                }
+              ]
+            },
+            "normal"
+          ]
+        }
+      ],
+      "=": "comp-gui-click-handler",
+      "parameters": ["pw1"]
+    },
+    {
+      "children": [
+        {"=": "stat-reload-plugin-config"},
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String...)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "size": 1,
+              "=": "expr-new-list",
+              "parameters": [{
+                "=": "expr-string",
+                "parameters": ["&7&l<<|&2&lPlayerWarIII&7&l|>> &fConfigs have been reloaded successfully! "]
+              }]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "mpw-reload",
+        "",
+        "Reloads the plugin configurations to make the changes apply!",
+        "pw.reload",
+        "&4&lHey! Sorry but, You don't have the permission to access to this command.",
+        "/mpw reload"
+      ]
+    },
+    {
+      "=": "comp-command",
+      "parameters": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "children": [
+        {
+          "=": "org.bukkit.inventory.Inventory#clear()",
+          "parameters": [{
+            "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+            "parameters": [{"=": "expr-command-sender"}]
+          }]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["0"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#BOW"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["1"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#CROSSBOW"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["2"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#SPECTRAL_ARROW"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["3"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#ARROW"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["4"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#COOKED_MUTTON"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["5"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#COOKED_RABBIT"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["39"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_HELMET"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["38"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_CHESTPLATE"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["37"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_LEGGINGS"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["36"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_BOOTS"}]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "mpw-archerhood",
+        "",
+        "Select you warrior kit as Archer Hood",
+        "mpw.archerhood",
+        "&4&lHey! Sorry but, You don't have the permission to access to this command.",
+        "mpw drownedofficial"
+      ]
+    },
+    {
+      "children": [
+        {
+          "=": "org.bukkit.inventory.Inventory#clear()",
+          "parameters": [{
+            "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+            "parameters": [{"=": "expr-command-sender"}]
+          }]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["0"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#TRIDENT"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["1"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#TRIDENT"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["2"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int,short)",
+              "parameters": [
+                {"=": "org.bukkit.Material#SNOWBALL"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                },
+                {
+                  "=": "expr-number",
+                  "parameters": ["25"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["3"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#GOLDEN_CARROT"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["4"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#COOKED_COD"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["39"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#GOLDEN_HELMET"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["38"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#GOLDEN_CHESTPLATE"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["37"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#GOLDEN_LEGGINGS"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["36"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#GOLDEN_BOOTS"}]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "mpw-drownedofficial",
+        "",
+        "Select you warrior kit as Drowned Official",
+        "mpw.drownedofficial",
+        "&4&lHey! Sorry but, You don't have the permission to access to this command.",
+        "mpw drownedofficial"
+      ]
+    },
+    {
+      "children": [
+        {
+          "=": "org.bukkit.inventory.Inventory#clear()",
+          "parameters": [{
+            "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+            "parameters": [{"=": "expr-command-sender"}]
+          }]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["0"]
+            },
+            {"=": "org.bukkit.Material#DIAMOND_SWORD"}
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["1"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_SWORD"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["2"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#LAVA_BUCKET"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["3"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#GOLDEN_APPLE"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["4"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#COOKED_BEEF"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["40"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#SHIELD"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["39"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#IRON_HELMET"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["38"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#IRON_CHESTPLATE"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["37"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#IRON_LEGGINGS"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["36"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#IRON_BOOTS"}]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "mpw-swordsman",
+        "",
+        "Select you warrior kit as Swords Man",
+        "mpw.swordsman",
+        "&4&lHey! Sorry but, You don't have the permission to access to this command.",
+        "mpw swordsman"
+      ]
+    },
+    {
+      "children": [
+        {
+          "=": "org.bukkit.inventory.Inventory#clear()",
+          "parameters": [{
+            "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+            "parameters": [{"=": "expr-command-sender"}]
+          }]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["0"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_AXE"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["1"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#DIAMOND_AXE"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["2"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#FIRE_CHARGE"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["3"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#ENCHANTED_GOLDEN_APPLE"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["16"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["4"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material,int)",
+              "parameters": [
+                {"=": "org.bukkit.Material#COOKED_CHICKEN"},
+                {
+                  "=": "expr-number",
+                  "parameters": ["64"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["39"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_HELMET"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["38"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_CHESTPLATE"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["37"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_LEGGINGS"}]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.inventory.Inventory#setItem(int,org.bukkit.inventory.ItemStack)",
+          "parameters": [
+            {
+              "=": "org.bukkit.inventory.InventoryHolder#getInventory()",
+              "parameters": [{"=": "expr-command-sender"}]
+            },
+            {
+              "=": "expr-number",
+              "parameters": ["36"]
+            },
+            {
+              "=": "org.bukkit.inventory.ItemStack#ItemStack(org.bukkit.Material)",
+              "parameters": [{"=": "org.bukkit.Material#CHAINMAIL_BOOTS"}]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "mpw-axeprofessional",
+        "",
+        "Select you warrior kit as Axe Proffesional",
+        "mpw.axeprofessional",
+        "&4&lHey! Sorry but, You don't have the permission to access to this command.",
+        "mpw axeprofessional"
+      ]
+    }
+  ],
+  "plugin.soft-dependencies": "",
+  "plugin.name": "PlayerWarIII",
+  "plugin.prefix": "",
+  "current-plugin-component": 4,
+  "plugin.author": "ItzKingHashir",
+  "plugin.description": "",
+  "plugin.permissions": "",
+  "open-plugin-components": [
+    3,
+    2,
+    4,
+    1,
+    6,
+    7,
+    9,
+    8
+  ],
+  "plugin.website": ""
+}

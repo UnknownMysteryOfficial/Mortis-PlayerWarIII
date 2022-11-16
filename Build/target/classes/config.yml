@@ -1,0 +1,6 @@
+#Thanks for downloading our Plugin!
+#More config coming in later updates
+
+PlayerWarIII:
+#Should the plugin be enable or disable.
+    plugin: "enable"

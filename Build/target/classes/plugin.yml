@@ -1,0 +1,37 @@
+name: "PlayerWarIII"
+version: "1.19.2"
+main: "vb.$playerwariii.PluginMain"
+api-version: 1.13
+authors: [ItzKingHashir]
+commands:
+  mpw-gui:
+    description: "Opens the GUI to select your what type of warrior you want to be and war with others!"
+    permission: "pw.command"
+    permission-message: "&4&lHey! Sorry but, You don't have the permission to access to this command."
+    usage: "/mpw gui"
+  mpw-reload:
+    description: "Reloads the plugin configurations to make the changes apply!"
+    permission: "pw.reload"
+    permission-message: "&4&lHey! Sorry but, You don't have the permission to access to this command."
+    usage: "/mpw reload"
+  mpw-archerhood:
+    description: "Select you warrior kit as Archer Hood"
+    permission: "mpw.archerhood"
+    permission-message: "&4&lHey! Sorry but, You don't have the permission to access to this command."
+    usage: "mpw drownedofficial"
+  mpw-drownedofficial:
+    description: "Select you warrior kit as Drowned Official"
+    permission: "mpw.drownedofficial"
+    permission-message: "&4&lHey! Sorry but, You don't have the permission to access to this command."
+    usage: "mpw drownedofficial"
+  mpw-swordsman:
+    description: "Select you warrior kit as Swords Man"
+    permission: "mpw.swordsman"
+    permission-message: "&4&lHey! Sorry but, You don't have the permission to access to this command."
+    usage: "mpw swordsman"
+  mpw-axeprofessional:
+    description: "Select you warrior kit as Axe Proffesional"
+    permission: "mpw.axeprofessional"
+    permission-message: "&4&lHey! Sorry but, You don't have the permission to access to this command."
+    usage: "mpw axeprofessional"
+permissions:
